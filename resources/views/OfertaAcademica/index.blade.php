@@ -3,7 +3,7 @@
 @section('content')
 @extends('Components.sidebar')
 <div id="mantenimientoProfesores" class="mantenimientoProfesores">
-    <div class="jumbotromp"></div>
+    <div class="jumbotromp mb-5"></div>
     <div class="card">
         <div class="card-header">
 
@@ -54,33 +54,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="row">
-
-            </div>
-            <div class="">
-                <table id="example" class="tabla table table-hover datatable">
-                    <thead class="py-3 theadCursos">
-                        <tr class="text-center">
-                            <th>Codigo Curso</th>
-                            <th>Codigo Carrera</th>
-                            <th>No Ciclo</th>
-                            <th>Nombre</th>
-                            <th>Creditos</th>
-                            <th>Horas Semanales</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-
-                    </tbody>
-
-                </table>
             </div>
         </div>
     </div>
