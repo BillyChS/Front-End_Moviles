@@ -25,7 +25,6 @@ class OfertaController extends Controller
     public function show(Request $request)
     {
 
-
         $response = $this->client->get('cursos.php?Codigo_Carrera=' . $request->Carrera . '&' . 'No_Ciclo=' . $request->No_Ciclo)
             ->getBody();
 

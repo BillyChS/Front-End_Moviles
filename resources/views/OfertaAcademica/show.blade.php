@@ -13,9 +13,6 @@
             <div id="h3Cursos" class="my-2 d-inline">
                 <h3 class="text-center py-2">Oferta Academica</h3>
             </div>
-            <div class="text-center justify-center row py-2">
-
-            </div>
 
         </div>
 
@@ -49,7 +46,7 @@
                                 <td><?= $curso->Creditos ?></td>
                                 <td><?= $curso->Horas_Semanales ?></td>
                                 <td class="text-center">
-                                    <a href="{{route('grupo.index',$curso->Codigo_Curso)}}" class="px-3 py-2 btn btn-primary"><i class="fas fa-check-circle"></i></a>
+                                    <a href="{{route('grupo.edit',$curso->Codigo_Curso)}}" class="px-3 py-2 btn btn-primary"><i class="fas fa-check-circle"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
