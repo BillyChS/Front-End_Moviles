@@ -8,7 +8,7 @@
         <div class="card-header">
 
             <div id="h3Cursos" class="my-2 d-inline">
-                <h3 class="text-center py-2">Oferta Academica</h3>
+                <h3 class="text-center py-2">Grupo</h3>
             </div>
 
             <div class="row">
