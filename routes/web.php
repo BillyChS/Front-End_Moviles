@@ -5,6 +5,7 @@ use App\Http\Controllers\CarreraController;
 use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CicloController;
 use App\Http\Controllers\OfertaController;
 use App\Http\Controllers\MatriculaController;
@@ -76,3 +77,27 @@ Route::get('{Codigo_Curso}/grupos', [GrupoController::class, 'index'])->name('gr
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::prefix('login')->group(function () {
+    Route::post('/login', [LoginController::class, 'input'])->name('login.input');
+    Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+    // Route::post('/mostrarAlumnos', [AlumnoController::class, 'showCursos'])->name('alumno.show');
+    // Route::get('/historial', [AlumnoController::class, 'mostrarHistorial'])->name('alumno.historial');
+});
+
+
+
