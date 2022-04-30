@@ -68,4 +68,24 @@ class CursosController extends Controller
 
         return redirect()->route('carrera.index');
     }
+
+    public function showCurso($Codigo_Curso)
+    {
+        $response = $this->client->get('cursos.php?Codigo_Curso=' . $Codigo_Curso)
+            ->getBody();
+
+        $curso = json_decode($response);
+
+        $response = $this->client->get('ciclo.php')
+            ->getBody();
+
+        $ciclos = json_decode($response);
+
+        $response = $this->client->get('carrera.php')
+            ->getBody();
+
+        $carreras = json_decode($response);
+
+        return view('Carrera/mostrarCurso', compact('curso', 'ciclos', 'carreras'));
+    }
 }

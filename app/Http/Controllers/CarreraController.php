@@ -20,6 +20,7 @@ class CarreraController extends Controller
         return view('carrera.index', compact('carreras'));
     }
 
+
     public function edit($Codigo_Carrera)
     {
         $response = $this->client->get('carrera.php')

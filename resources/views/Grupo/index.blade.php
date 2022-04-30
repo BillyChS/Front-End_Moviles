@@ -60,17 +60,35 @@
                 <table id="example" class="tabla table table-hover datatable">
                     <thead class="py-3 theadCursos">
                         <tr class="text-center">
-                            <th>Codigo Curso</th>
-                            <th>Codigo Carrera</th>
+                            <th>Numero Grupo</th>
                             <th>No Ciclo</th>
-                            <th>Nombre</th>
-                            <th>Creditos</th>
-                            <th>Horas Semanales</th>
+                            <th>Codigo_Curso</th>
+                            <th>Cedula Profesor</th>
+                            <th>Horario</th>
+                            <th>Accion</th>
                         </tr>
                     </thead>
 
+                    @if($grupos != 0)
+                    <tbody>
+                        <?php foreach ($grupos as $grupo) : ?>
+                            <tr class="text-center">
+                                <td><?= $grupo->Numero_Grupo ?></td>
+                                <td><?= $grupo->No_Ciclo ?></td>
+                                <td><?= $grupo->Codigo_Curso ?></td>
+                                <td><?= $grupo->Cedula_Profesor ?></td>
+                                <td><?= $grupo->Horario ?></td>
+                                <td>
+                                    <a class="btn btn-primary" href="{{ route('grupo.edit',$grupo->Numero_Grupo) }}"><i class=" fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                    @else
+                    <tbody>
 
                     </tbody>
+                    @endif
 
                 </table>
             </div>

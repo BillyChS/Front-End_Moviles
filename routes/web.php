@@ -38,6 +38,9 @@ Route::prefix('cursos')->group(function () {
     Route::post('', [CursosController::class, 'store'])->name('cursos.create');
     Route::post('/mostrarCursos', [CursosController::class, 'showCursos'])->name('cursos.show');
     Route::delete('{Codigo_Curso}', [CursosController::class, 'destroy'])->name('cursos.delete');
+    Route::post('', [CursosController::class, 'edit'])->name('cursos.edit');
+
+    Route::get('{Codigo_Curso}/editarCurso', [CursosController::class, 'showCurso'])->name('mostrarCurso.show');
 });
 
 
@@ -71,8 +74,9 @@ Route::prefix('oferta')->group(function () {
     Route::post('/ofAcademica', [OfertaController::class, 'show'])->name('oferta.show');
 });
 
-Route::get('{Codigo_Curso}/grupos', [GrupoController::class, 'index'])->name('grupo.index');
-
-
+Route::get('{/grupos', [GrupoController::class, 'index'])->name('grupo.index');
+Route::get('{Codigo_Curso}/ediGrupo', [GrupoController::class, 'showGrupos'])->name('showGrupo.edit');
+Route::get('{Numero_Grupo}/ediGrupo', [GrupoController::class, 'edit'])->name('grupo.edit');
+Route::post('/grupoCreate', [GrupoController::class, 'store'])->name('grupo.create');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

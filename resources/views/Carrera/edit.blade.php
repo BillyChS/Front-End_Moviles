@@ -36,7 +36,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <form action="{{ route('cursos.create') }}" method="POST">
+                                <form action="{{ route('cursos.edit') }}" method="POST">
                                     @csrf
                                     <div class="row">
 
@@ -104,13 +104,27 @@
                                     <td><?= $c->Nombre ?></td>
                                     <td><?= $c->Creditos ?></td>
                                     <td><?= $c->Horas_Semanales ?></td>
-                                    <td class="text-center">
-                                        <!-- <button class="btn btn-primary"><i class=" fas fa-edit"></i></button> -->
-                                        <form action="{{ route('cursos.delete',$c->Codigo_Curso) }}" method="POST">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger"><i class=" fas fa-minus-circle"></i></button>
-                                        </form>
+                                    <td width="50px" class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li class="">
+                                                    <a href="{{route('mostrarCurso.show',$c->Codigo_Curso)}}" class="dropdown-item btn btn-primary"><i class=" fas fa-edit"></i> Editar Curso</a>
+                                                </li>
+                                                <li class="">
+                                                    <form action="{{ route('cursos.delete',$c->Codigo_Curso) }}" method="POST">
+                                                        @method('DELETE')
+                                                        @csrf
+                                                        <button type="submit" class="dropdown-item btn btn-danger"><i class=" fas fa-minus-circle"></i> Eliminar Curso</button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
 
                                     </td>
                                 </tr>
