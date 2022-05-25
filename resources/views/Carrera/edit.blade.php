@@ -36,7 +36,7 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <form action="{{ route('cursos.edit') }}" method="POST">
+                                <form action="{{ route('cursos.store') }}" method="POST">
                                     @csrf
                                     <div class="row">
 

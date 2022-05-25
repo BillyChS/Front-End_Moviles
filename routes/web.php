@@ -31,15 +31,13 @@ Route::prefix('carrera')->group(function () {
 
 
 //Route::post('', [CarreraController::class, 'store'])->name('carrera.create');
-
 //Cursos
+Route::post('', [CursosController::class, 'store'])->name('cursos.store');
 Route::prefix('cursos')->group(function () {
     Route::get('', [CursosController::class, 'index'])->name('cursos.index');
-    Route::post('', [CursosController::class, 'store'])->name('cursos.create');
     Route::post('/mostrarCursos', [CursosController::class, 'showCursos'])->name('cursos.show');
     Route::delete('{Codigo_Curso}', [CursosController::class, 'destroy'])->name('cursos.delete');
     Route::post('', [CursosController::class, 'edit'])->name('cursos.edit');
-
     Route::get('{Codigo_Curso}/editarCurso', [CursosController::class, 'showCurso'])->name('mostrarCurso.show');
 });
 
