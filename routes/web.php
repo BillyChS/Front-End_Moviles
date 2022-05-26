@@ -49,6 +49,7 @@ Route::prefix('cursos')->group(function () {
 
 //Profesores
 Route::get('/profesor', [ProfesorController::class, 'index'])->name('profesor.index');
+Route::post('', [ProfesorController::class, 'index'])->name('profesor.store');
 
 //Alumnos
 Route::prefix('alumno')->group(function () {

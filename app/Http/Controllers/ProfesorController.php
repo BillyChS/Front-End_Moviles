@@ -26,6 +26,6 @@ class ProfesorController extends Controller
             "Titulo" => "Diploma"
         ]);
 
-        return view('Carrera/index');
+        return view('profesor.index');
     }
 }

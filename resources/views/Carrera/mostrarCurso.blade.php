@@ -41,9 +41,9 @@
                                     <div class="row">
 
                                         <div class="col-4 mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Nombre del Curso</label>
+                                            <label for="exampleInputEmail1" class="form-label">Codigo del Curso</label>
                                             <select name="Codigo_Curso" class="form-select" aria-label="Default select example">
-                                                <option value="{{$curso->Codigo_Curso}}" selected><?php echo $curso->Nombre ?> </option>
+                                                <option value="{{$curso->Codigo_Curso}}" selected><?php echo $curso->Codigo_Curso ?> </option>
                                             </select>
                                         </div>
                                         <div class="col-4 mb-3">
@@ -76,7 +76,7 @@
                                             <input name="Horas_Semanales" type="text" class="form-control" id="exampleInputPassword1">
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary">Agregar</button>
+                                    <button class="btn btn-primary">Editar</button>
                                 </form>
                             </div>
                         </div>

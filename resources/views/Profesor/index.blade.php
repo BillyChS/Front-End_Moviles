@@ -42,18 +42,24 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <form action="{{ route('carrera.store') }}" method="POST">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Codigo Carrera</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Titulo</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
+                                <form action="{{ route('profesor.store') }}" method="POST">
+                                    <div class="row">
+                                        <div class="col-4 mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Cedula Profesor</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="col-4 mb-3">
+                                            <label for="exampleInputPassword" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword">
+                                        </div>
+                                        <div class="col-4 mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+                                            <input type="text" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
                                     </div>
                                     <button class="btn btn-primary">Agregar</button>
                                 </form>
