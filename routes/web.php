@@ -87,15 +87,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-
-
-
-
-
-
-
-
-
 Route::prefix('login')->group(function () {
     Route::post('/login', [LoginController::class, 'input'])->name('login.input');
     Route::get('/login', [LoginController::class, 'index'])->name('login.index');
@@ -105,3 +96,7 @@ Route::prefix('login')->group(function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
