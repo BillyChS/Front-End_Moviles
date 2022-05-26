@@ -63,24 +63,24 @@ class CarreraController extends Controller
     public function store(Request $request)
     {
 
-       $user= $this->client->post('carrera.php', [
+        $user = $this->client->post('carrera.php', [
             'json' => [
                 "Codigo_Carrera" => $request->Codigo_Carrera,
                 "Nombre" => $request->Nombre,
                 "Titulo" => $request->Titulo
             ]
-            
+
         ])->getBody();
 
-        $datos=json_decode($user);
-        
-       // if($datos['ROL']==1){
-            return redirect()->route('cursos.index');
-       // }
+        $datos = json_decode($user);
+
+        // if($datos['ROL']==1){
+        return redirect()->route('carrera.index');
+        // }
         // else if($datos['ROL']==2){
         //     //
         // }
-       
+
 
         return redirect()->route('carrera.index');
     }

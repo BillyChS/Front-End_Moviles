@@ -65,6 +65,12 @@ body{
     padding-top: 70px;
 }
 
+.colornav{
+    text-decoration: none; 
+    color: #ffffff !important;
+    background-color: #0d143b !important;
+}
+
 .footer_main{
     position: fixed;
     bottom: 0px;

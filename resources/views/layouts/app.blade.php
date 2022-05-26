@@ -31,13 +31,13 @@
 <body>
     <div id="app">
 
+
         <main class="py-2">
             @yield('content')
         </main>
 
     </div>
 
-    @include('Components.footer')
 
     <script src="https://kit.fontawesome.com/a3c8152c06.js" crossorigin="anonymous"></script>
 
