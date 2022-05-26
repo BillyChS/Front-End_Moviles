@@ -69,6 +69,22 @@ class CursosController extends Controller
         return redirect()->route('carrera.index');
     }
 
+    public function edit(Request $request)
+    {
+
+        $this->client->put('cursos.php?Codigo_Curso=' . $request->Codigo_Curso, [
+            'json' => [
+                'Codigo_Curso' => $request->Codigo_Curso,
+                'Codigo_Carrera' => $request->Codigo_Carrera,
+                'No_Ciclo' => $request->No_Ciclo,
+                'Nombre' => $request->Nombre,
+                'Creditos' => $request->Creditos,
+                'Horas_Semanales' => $request->Horas_Semanales
+            ]
+        ]);
+        return redirect()->route('carrera.index');
+    }
+
     public function showCurso($Codigo_Curso)
     {
         $response = $this->client->get('cursos.php?Codigo_Curso=' . $Codigo_Curso)
