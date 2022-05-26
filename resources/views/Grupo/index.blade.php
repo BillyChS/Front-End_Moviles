@@ -11,6 +11,33 @@
                 <h3 class="text-center py-2">Grupo</h3>
             </div>
 
+            <div class="row">
+                <div class="col-4">
+                    <label for="exampleInputPassword" class="form-label">Carrera</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+
+                        <option value=""></option>
+
+                    </select>
+                </div>
+
+                <div class="col-4">
+                    <label for="exampleInputPassword" class="form-label">No Ciclo</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+
+                        <option value=""></option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="py-3">
+
+                <button class="btn btn-primary">Buscar Cursos Disponibles</button>
+            </div>
+
             <div class="d-none row input-group">
                 <form class="form-inline mr-auto">
                     <div class="row">

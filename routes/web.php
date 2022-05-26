@@ -81,3 +81,27 @@ Route::get('{Numero_Grupo}/ediGrupo', [GrupoController::class, 'edit'])->name('g
 Route::post('/grupoCreate', [GrupoController::class, 'store'])->name('grupo.create');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::prefix('login')->group(function () {
+    Route::post('/login', [LoginController::class, 'input'])->name('login.input');
+    Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+    // Route::post('/mostrarAlumnos', [AlumnoController::class, 'showCursos'])->name('alumno.show');
+    // Route::get('/historial', [AlumnoController::class, 'mostrarHistorial'])->name('alumno.historial');
+});
+
+
+
