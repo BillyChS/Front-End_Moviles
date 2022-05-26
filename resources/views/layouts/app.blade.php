@@ -37,6 +37,8 @@
 
     </div>
 
+    @include('Components.footer')
+
     <script src="https://kit.fontawesome.com/a3c8152c06.js" crossorigin="anonymous"></script>
 
 
@@ -47,6 +49,7 @@
             $('#example').DataTable();
         });
     </script>
+
 </body>
 
 </html>

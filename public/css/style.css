@@ -65,3 +65,8 @@ body{
     padding-top: 70px;
 }
 
+.footer_main{
+    position: fixed;
+    bottom: 0px;
+    width: 1100px;
+}
